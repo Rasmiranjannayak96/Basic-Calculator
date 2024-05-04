@@ -1,0 +1,19 @@
+x=[]
+y=[]
+operators=('+','-','*','/')
+equal=[]
+while '=' not in equal:
+    a=float(input('enter numbers and floating values only'))
+    x.append(a)
+    b=input('enter the operator between +,-,*,/')
+    if b in operators: y.append(b)
+    else: equal.append(b)
+else:
+    p=x[0]
+    for j in range(len(y)):
+        if y[j]=='+': p+=x[j+1]
+        elif y[j]=='-': p-=x[j+1]
+        elif y[j]=='*': p*=x[j+1]
+        elif y[j]=='/': p/=x[j+1]
+        else: continue
+print(f'your calculation is {p}')
