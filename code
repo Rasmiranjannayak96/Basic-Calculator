@@ -3,8 +3,13 @@ y=[]
 operators=('+','-','*','/')
 equal=[]
 while '=' not in equal:
-    a=float(input('enter numbers and floating values only'))
-    x.append(a)
+    while True:        
+        try:
+            a=input('enter numbers and floating values only')
+            x.append(float(a))
+            break
+        except ValueError:
+            pass    
     b=input('enter the operator between +,-,*,/')
     if b in operators: y.append(b)
     else: equal.append(b)
